@@ -10,6 +10,10 @@ data without ANY EFFORT with a new and improved AUTO SHARDING ALGORITHM.
 Getting Started
 ---------------
 
+Install ``gevent``::
+
+    easy_install -U gevent
+
 Run the server::
 
     python server.py
