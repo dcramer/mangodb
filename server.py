@@ -16,6 +16,9 @@ def mangodb(socket, address):
             break
         if len(cmd_bits) > 1:
             output.write(cmd_bits[1])
+            if os.environ.get('MANGODB_DURABLE', False):
+                output.flush()
+                os.fsync(output.fileno())
             client.write('OK' + os.urandom(1024) + '\r\n')
         client.flush()
 
