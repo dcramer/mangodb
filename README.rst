@@ -24,6 +24,11 @@ That's it! You'll enjoy the same reliability as you're used to with MongoDB, but
 that you'll never want to go back!
 
 
+License
+-------
+
+If you use this, you must donate $1 to someone more intelligent than you.
+
 Credits
 -------
 
