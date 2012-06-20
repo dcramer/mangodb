@@ -24,6 +24,6 @@ def mangodb(socket, address):
 
 
 if __name__ == '__main__':
-    server = StreamServer(('0.0.0.0', 6000), mangodb)
-    print ('Starting MangoDB on port 6000')
+    server = StreamServer(('0.0.0.0', 27017), mangodb)
+    print ('Starting MangoDB on port 27017')
     server.serve_forever()
