@@ -6,7 +6,7 @@ def mangodb(socket, address):
     socket.sendall('HELLO\r\n')
     client = socket.makefile()
     output = open('/dev/null', 'w')
-    while True:
+    while 1:
         line = client.readline()
         if not line:
             break
