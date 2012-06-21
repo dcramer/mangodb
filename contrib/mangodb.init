@@ -1,0 +1,61 @@
+#!/bin/bash
+#
+# /etc/init.d/mangodb
+#
+# Startup script for MangoDB
+# 
+# chkconfig: 2345 20 80
+# description: Starts and stops MangoDB
+. /etc/init.d/functions
+mangoUser=mango
+mangoBin=/opt/mangodb/bin/server.py
+pythonBin=/usr/bin/python2.7
+desc="MangoDB daemon"
+outFile="/var/log/mangodb/mangodb.out"
+
+if ! [ -f $mangoBin ]; then
+  echo "MangoDB binary not found."
+  exit 5
+fi
+
+if ! [ -f $pythonBin ]; then
+  echo "Python 2.7 binary not found."
+  exit 5
+fi
+
+start() {
+  echo "Starting $desc: "
+  su $mangoUser -c "nohup $pythonBin $mangoBin >>$outFile 2>&1 &"
+  RETVAL=$?
+  return $RETVAL
+}
+
+stop() {
+  echo "Shutting down $desc: "
+  pkill -f mangodb
+}
+
+restart() {
+    stop
+    start
+}
+
+status() {
+  pid=$(pgrep -f mangodb)
+
+  if [ -z $pid ]; then
+    echo "MangoDB is NOT running."
+  else
+    echo "MangoDB is running (pid is $pid)."
+  fi
+}
+
+case "$1" in
+  start)   start;;
+  stop)    stop;;
+  restart) restart;;
+  status)  status;;
+  *)       echo "Usage: $0 {start|stop|restart}"
+           RETVAL=2;;
+esac
+exit $RETVAL
