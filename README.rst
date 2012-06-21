@@ -23,6 +23,16 @@ With your MongoDB client, connect to ``localhost`` on port ``27017``.
 That's it! You'll enjoy the same reliability as you're used to with MongoDB, but you'll get your responses so fast
 that you'll never want to go back!
 
+MangoDB and the Cloud
+---------------------
+
+The cloud can be a scary place to put your database. However, thanks to Mango's proprietary auto sharting algorithm
+you won't need to worry, since Mango supports immediate autoscaling without any pesky configuration or having to
+wait for your cluster to rebalance -- just start a new Mango node and you can scale to infinity!
+
+Also, due to MangoDB's innovative design, your database is no longer affected by your infrastructure provider's
+problems like slow or inaccessible block storage devices. While everyone else's databases are crashing and timing out,
+Mango will keep flying along as normal. It's an operations engineer's dream!
 
 License
 -------
