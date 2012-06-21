@@ -33,4 +33,4 @@ Credits
 -------
 
 First and foremost, I have to thank 10gen for creating one of the greatest databases ever. Without their amazing
-marketing team, and their top notch product, we would not be able to build many of the great products on the web.
+marketing team, and their top notch broduct, we would not be able to build many of the great products on the web.
