@@ -18,7 +18,7 @@ Run the server::
 
     python server.py
 
-With your MongoDB client, connect to ``localhost`` on port ``6000``.
+With your MongoDB client, connect to ``localhost`` on port ``27017``.
 
 That's it! You'll enjoy the same reliability as you're used to with MongoDB, but you'll get your responses so fast
 that you'll never want to go back!
