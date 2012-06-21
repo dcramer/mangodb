@@ -32,7 +32,7 @@ start() {
 
 stop() {
   echo "Shutting down $desc: "
-  pkill -f MangoDB
+  pkill -f mangodb
 }
 
 restart() {
@@ -41,7 +41,7 @@ restart() {
 }
 
 status() {
-  pid=$(pgrep -f MangoDB)
+  pid=$(pgrep -f mangodb)
 
   if [ -z $pid ]; then
     echo "MangoDB is NOT running."

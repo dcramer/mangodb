@@ -80,8 +80,6 @@ chkconfig --add %{name}
 %preun 
 service %{name} stop >/dev/null 2>&1
 chkconfig --del %{name}
-%postun
-service %{name} condrestart >/dev/null 2>&1
 
 %changelog
 * Wed Jun 20 2012 Nathan Milford <nathan@milford.io> - 0.0.1
