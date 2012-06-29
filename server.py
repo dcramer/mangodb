@@ -19,7 +19,9 @@ def mangodb(socket, address):
             if os.environ.get('MANGODB_DURABLE', False):
                 output.flush()
                 os.fsync(output.fileno())
-            client.write('OK' + os.urandom(1024).encode('string-escape') + '\r\n')
+            data = '42' if os.environ.get('MANGODB_EVENTUAL', False) else \
+                os.urandom(1024).encode('string-escape')
+            client.write('OK' + data + '\r\n')
         client.flush()
 
 
