@@ -1,5 +1,4 @@
-MangoDB
-=======
+.. image:: https://s3.amazonaws.com/files.bitfluxx.com/MangoDB.png
 
 MangoDB is one of the fastest databases in existence. It allows you to store ANY KIND OF DATA you want without any IO
 bottleneck. You're only limited by the size of your pipe.
