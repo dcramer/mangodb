@@ -6,7 +6,7 @@ import threading
 def mangodb(socket, address):
     socket.sendall('HELLO\r\n')
     client = socket.makefile()
-    output = open('/dev/null', 'w')
+    output = open(os.devnull, 'w')
     lock = threading.Lock()
     while 1:
         line = client.readline()
