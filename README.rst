@@ -3,7 +3,7 @@
 MangoDB is one of the fastest databases in existence. It allows you to store ANY KIND OF DATA you want without any IO
 bottleneck. You're only limited by the size of your pipe.
 
-If you're familiar with MongoDB then you'll feel write at home with Mango. We'll instantly map all of your existing
+If you're familiar with MongoDB then you'll feel right at home with Mango. We'll instantly map all of your existing
 data without ANY EFFORT with a new and improved AUTO SHARTING ALGORITHM.
 
 Getting Started
