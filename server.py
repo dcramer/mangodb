@@ -12,6 +12,7 @@ def mangodb(socket, address):
     client = socket.makefile()
     output = open(os.devnull, 'w')
     lock = threading.Lock()
+    wait = threading.Condition(lock)
     while 1:
         line = client.readline()
         if not line:
@@ -20,6 +21,9 @@ def mangodb(socket, address):
         cmd = cmd_bits[0]
         if cmd == 'BYE':
             break
+        if cmd == 'WAIT':
+            wait.wait()
+            continue
         if len(cmd_bits) > 1:
             lock.acquire(True)
             output.write(cmd_bits[1])
