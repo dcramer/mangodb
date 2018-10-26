@@ -37,6 +37,7 @@ Theoretical Analysis
 --------------------
 
 MangoDB is backed by theoretical analysis on all primitive database operations, including:
+
  - Insert: O(1)
  - Update: O(1)
  - Select: O(1)
