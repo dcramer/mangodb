@@ -33,6 +33,16 @@ Also, due to MangoDB's innovative design, your database is no longer affected by
 problems like slow or inaccessible block storage devices. While everyone else's databases are crashing and timing out,
 Mango will keep flying along as normal. It's an operations engineer's dream!
 
+Theoretical Analysis
+--------------------
+
+MangoDB is backed by theoretical analysis on all primitive database operations, including:
+ - Insert: O(1)
+ - Update: O(1)
+ - Select: O(1)
+ - Delete: O(1)
+
+
 License
 -------
 
